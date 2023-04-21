@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>dts</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="day, time. shifter, nightmode, darkmode, lightmode, light, dark, visuality, eye health">
+ 
+
+  
+
+ 
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/e8e4a5565a.js" crossorigin="anonymous"></script>
+
+  <script src="js/jquery-3.6.min.js"></script>
+
+
+</head>
+
+<body>
+
+ 
+  
+
+  <!--daytime shifter-->
+<div style="width: 100%; height: 50px; margin-top: 50px; /*background: yellow*/;">
+  <div style="float: rightcenter; margin-left: 49%; margin-top: 40%;">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <i class="fa-solid fa-sun"></i>
+      <i class="fa-solid fa-moon"></i>
+      <div class="ball"></div>
+    </label>
+  </div>
+  
+  <script type="text/javascript">
+  const chk = document.getElementById('chk');
+
+chk.addEventListener('click', () => {
+  chk.checked?document.body.classList.add("dark"):document.body.classList.remove("dark");
+  localStorage.setItem('darkModeStatus', chk.checked);
+});
+
+window.addEventListener('load', (event) => {
+  if(localStorage.getItem('darkModeStatus')=="true"){
+    document.body.classList.add("dark"); 
+    document.getElementById('chk').checked = true;
+  }
+});
+    </script>
+    </div>
+  <!--daytime shifter-->
+
+  </body>
+  </html>
