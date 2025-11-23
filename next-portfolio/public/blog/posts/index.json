@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Bento Portföy Tasarım Notları",
+    "date": "2024-06-01",
+    "path": "blog/posts/bento-notlari.txt",
+    "image": "blog/images/bento-notlari.svg"
+  },
+  {
+    "title": "Next.js ve Bootstrap 5 ile Çift Platform",
+    "date": "2024-05-18",
+    "path": "blog/posts/next-bootstrap.txt",
+    "image": "blog/images/next-bootstrap.svg"
+  },
+  {
+    "title": "Animasyon ve Performans",
+    "date": "2024-04-20",
+    "path": "blog/posts/animasyon-performans.txt",
+    "image": "blog/images/animasyon-performans.svg"
+  }
+]

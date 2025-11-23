@@ -1,0 +1,1 @@
+Animasyonları kritik olmayan öğelerde kullanmak, sayfa yüklenme hızını korurken deneyimi zenginleştiriyor. CSS tabanlı geçişler GPU hızlandırmasıyla çalıştığı için mobilde de akıcı bir his sağlıyor.

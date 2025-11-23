@@ -19,17 +19,19 @@
 }
 
 * {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-body {
+body,
+html,
+#__next {
   background: radial-gradient(circle at 10% 20%, rgba(123, 109, 255, 0.14), transparent 25%),
     radial-gradient(circle at 90% 10%, rgba(58, 213, 201, 0.1), transparent 20%),
     radial-gradient(circle at 50% 90%, rgba(255, 255, 255, 0.04), transparent 25%),
     var(--bg);
   color: var(--text);
   min-height: 100vh;
-  position: relative;
 }
 
 .bg-body {
@@ -40,7 +42,8 @@ body {
   color: var(--text) !important;
 }
 
-.navbar, .glassy {
+.navbar,
+.glassy {
   background: rgba(15, 17, 21, 0.75);
   backdrop-filter: blur(10px);
   border: 1px solid var(--border);
@@ -49,7 +52,7 @@ body {
 
 :root[data-theme='light'] .navbar,
 :root[data-theme='light'] .glassy {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .navbar-brand {
@@ -212,15 +215,15 @@ body {
   flex-direction: column;
   z-index: 2000;
   transition: opacity 0.4s ease;
-}
-
-:root[data-theme='light'] .page-loader {
-  background: rgba(255, 255, 255, 0.75);
+  pointer-events: none;
 }
 
 .page-loader.hidden {
   opacity: 0;
-  pointer-events: none;
+}
+
+:root[data-theme='light'] .page-loader {
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .badge {
@@ -231,8 +234,47 @@ footer .fa-brands {
   filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
 }
 
-.footer .text-secondary {
-  color: var(--muted);
+small,
+.text-secondary {
+  color: var(--muted) !important;
+}
+
+html[data-theme='light'] small,
+html[data-theme='light'] .text-secondary {
+  color: #556072 !important;
+}
+
+.glassy:hover {
+  border-color: rgba(123, 109, 255, 0.35);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--secondary));
+  border-radius: 10px;
+}
+
+.blog-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+@media (max-width: 767.98px) {
+  .bento-card {
+    padding: 18px;
+  }
+  .portfolio-card img {
+    height: 150px;
+  }
 }
 
 @keyframes fadeInUp {
@@ -253,76 +295,5 @@ footer .fa-brands {
   }
   50% {
     transform: translateY(-10px);
-  }
-}
-
-#blogContainer .bento-card {
-  min-height: 200px;
-}
-
-.blog-image {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-:root[data-theme='light'] .bento-card {
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.08);
-}
-
-.btn-primary,
-.btn-outline-primary {
-  border-radius: 12px;
-  font-weight: 700;
-}
-
-.navbar-toggler {
-  border-radius: 12px;
-}
-
-.navbar-toggler:focus {
-  box-shadow: 0 0 0 0.25rem rgba(123, 109, 255, 0.4);
-}
-
-small,
-.text-secondary {
-  color: var(--muted) !important;
-}
-
-html[data-theme='light'] small,
-html[data-theme='light'] .text-secondary {
-  color: #556072 !important;
-}
-
-.glassy:hover {
-  border-color: rgba(123, 109, 255, 0.35);
-}
-
-.tooltip-inner {
-  background: var(--card);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--primary), var(--secondary));
-  border-radius: 10px;
-}
-
-@media (max-width: 767.98px) {
-  .bento-card {
-    padding: 18px;
-  }
-  .portfolio-card img {
-    height: 150px;
   }
 }
