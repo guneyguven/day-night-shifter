@@ -1,0 +1,9 @@
+<svg width="600" height="360" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="600" height="360" rx="32" fill="#0f1115"/>
+  <rect x="40" y="40" width="240" height="140" rx="24" fill="#7b6dff" opacity="0.85"/>
+  <rect x="320" y="60" width="120" height="220" rx="24" fill="#3ad5c9" opacity="0.7"/>
+  <rect x="80" y="210" width="180" height="90" rx="20" fill="#ffffff" opacity="0.07"/>
+  <text x="50" y="120" fill="white" font-family="Inter, sans-serif" font-size="28" font-weight="700">Bento Layout</text>
+  <circle cx="520" cy="80" r="22" fill="#ffffff" opacity="0.15"/>
+  <circle cx="500" cy="260" r="34" fill="#ffffff" opacity="0.08"/>
+</svg>

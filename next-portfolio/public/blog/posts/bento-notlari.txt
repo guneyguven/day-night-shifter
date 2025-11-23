@@ -1,0 +1,1 @@
+Grid tabanlı Bento düzeni, aynı anda hem düzen hem de hareket hissi verir. Kartların köşelerini yuvarlayarak ve yumuşak gölgeler ekleyerek tasarımın dokunsallığını artırdım. Tema seçiciyi üst menüde tutarak görünür ve erişilebilir kıldım.

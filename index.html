@@ -1,56 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr" data-theme="dark">
 <head>
-  <title>dts</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="day, time. shifter, nightmode, darkmode, lightmode, light, dark, visuality, eye health">
- 
-
-  
-
- 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Güven | Bento Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://kit.fontawesome.com/e8e4a5565a.js" crossorigin="anonymous"></script>
-
-  <script src="js/jquery-3.6.min.js"></script>
-
-
 </head>
-
-<body>
-
- 
-  
-
-  <!--daytime shifter-->
-<div style="width: 100%; height: 50px; margin-top: 50px; /*background: yellow*/;">
-  <div style="float: rightcenter; margin-left: 49%; margin-top: 40%;">
-    <input type="checkbox" class="checkbox" id="chk" />
-    <label class="label" for="chk">
-      <i class="fa-solid fa-sun"></i>
-      <i class="fa-solid fa-moon"></i>
-      <div class="ball"></div>
-    </label>
+<body class="bg-body text-body">
+  <div class="page-loader" id="page-loader">
+    <div class="spinner-grow text-primary" role="status"></div>
+    <p class="mt-3 fw-semibold">Yükleniyor...</p>
   </div>
-  
-  <script type="text/javascript">
-  const chk = document.getElementById('chk');
 
-chk.addEventListener('click', () => {
-  chk.checked?document.body.classList.add("dark"):document.body.classList.remove("dark");
-  localStorage.setItem('darkModeStatus', chk.checked);
-});
+  <header class="py-3 sticky-top glassy">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-gradient" href="#home">Güven</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Menüyü Aç">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bio">Bio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item ms-lg-3">
+              <button class="btn btn-outline-primary d-flex align-items-center gap-2" id="themeToggle" aria-label="Tema Değiştir">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+                <span class="small" id="themeLabel">Dark</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-window.addEventListener('load', (event) => {
-  if(localStorage.getItem('darkModeStatus')=="true"){
-    document.body.classList.add("dark"); 
-    document.getElementById('chk').checked = true;
-  }
-});
-    </script>
+  <main class="container py-5">
+    <section id="home" class="mb-5">
+      <div class="row g-4 bento-grid">
+        <div class="col-12 col-lg-6">
+          <div class="bento-card gradient-card h-100">
+            <div>
+              <p class="text-uppercase fw-semibold small text-secondary">Selam!</p>
+              <h1 class="display-5 fw-bold">Bento stilinde modern bir portföy.</h1>
+              <p class="lead text-secondary">Bootstrap 5 ızgara yapısı, animasyonlu geçişler ve kalıcı tema seçimi ile şık bir deneyim.</p>
+              <div class="d-flex gap-3 mt-4 flex-wrap">
+                <a href="#portfolio" class="btn btn-primary btn-lg">Projeler</a>
+                <a href="#contact" class="btn btn-outline-primary btn-lg">İletişim</a>
+              </div>
+            </div>
+            <div class="floating-dots" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="bento-card h-100">
+            <div class="icon-bubble bg-primary-subtle text-primary"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3 class="h5 fw-bold">Etkileyici Animasyonlar</h3>
+            <p class="text-secondary">Kart girişleri, hover efektleri ve yüklenme animasyonları her sayfayı hareketli kılar.</p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="bento-card h-100">
+            <div class="icon-bubble bg-success-subtle text-success"><i class="fa-solid fa-toggle-on"></i></div>
+            <h3 class="h5 fw-bold">Kalıcı Tema</h3>
+            <p class="text-secondary">Karanlık veya aydınlık tercihleri tarayıcıda saklanır, kullanıcı geri döndüğünde aynen devam eder.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bio" class="mb-5">
+      <div class="row g-4 align-items-center">
+        <div class="col-12 col-lg-4">
+          <div class="bento-card text-center h-100">
+            <div class="avatar-circle mb-3">
+              <span class="avatar-initial">G</span>
+            </div>
+            <h2 class="h4 fw-bold">Güven</h2>
+            <p class="text-secondary mb-0">Full-stack geliştirici, yaratıcı problem çözücü ve deneyim tasarımcısı.</p>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="bento-card h-100">
+            <h3 class="h5 fw-bold mb-3">Kısa Bio</h3>
+            <p class="text-secondary">Teknolojiyle hikâye anlatmayı seviyorum. Ölçeklenebilir uygulamalar, modern arayüzler ve performans odaklı çözümler geliştiriyorum. Tasarım ve mühendislik arasındaki köprüyü kurmak benim için keyifli bir süreç.</p>
+            <div class="row g-3 mt-2">
+              <div class="col-6 col-md-4">
+                <div class="pill">Next.js</div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="pill">Bootstrap 5</div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="pill">Animasyon</div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="pill">Erişilebilirlik</div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="pill">UI/UX</div>
+              </div>
+              <div class="col-6 col-md-4">
+                <div class="pill">Strateji</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 fw-bold mb-0">Portfolio</h2>
+        <span class="text-secondary small">Bootstrap grid ile Bento yerleşim</span>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="bento-card portfolio-card">
+            <img src="https://images.unsplash.com/photo-1527443224154-d2e0c09356b1?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 mb-3" alt="Dashboard" loading="lazy" />
+            <h3 class="h5 fw-bold">Veri Odaklı Dashboard</h3>
+            <p class="text-secondary">Canlı veri akışı, tematik görselleştirmeler ve interaktif filtreler.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="badge bg-primary-subtle text-primary">React</span>
+              <span class="badge bg-secondary-subtle text-secondary">D3.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="bento-card portfolio-card">
+            <img src="https://images.unsplash.com/photo-1524666041070-9d87656c25bb?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 mb-3" alt="E-ticaret" loading="lazy" />
+            <h3 class="h5 fw-bold">Headless E-ticaret</h3>
+            <p class="text-secondary">Çoklu tema desteği, SEO dostu ve yüksek performanslı vitrinler.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="badge bg-success-subtle text-success">Next.js</span>
+              <span class="badge bg-warning-subtle text-warning">Stripe</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="bento-card portfolio-card">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded-3 mb-3" alt="Mobil uygulama" loading="lazy" />
+            <h3 class="h5 fw-bold">Mobil Ürün Deneyimi</h3>
+            <p class="text-secondary">Mikro animasyonlar, sezgisel akışlar ve offline-first özellikler.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <span class="badge bg-info-subtle text-info">React Native</span>
+              <span class="badge bg-danger-subtle text-danger">Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 fw-bold mb-0">Blog</h2>
+        <span class="text-secondary small">Düz yazı dosyalarından otomatik içe aktarım</span>
+      </div>
+      <div class="row g-4" id="blogContainer" aria-live="polite">
+        <div class="col-12">
+          <div class="bento-card text-center">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p class="mt-3 mb-0 text-secondary">Yazılar yükleniyor...</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-5">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="bento-card h-100">
+            <h2 class="h4 fw-bold mb-3">İletişim</h2>
+            <p class="text-secondary">Proje, iş birliği veya merhaba demek için ulaşın.</p>
+            <ul class="list-unstyled d-grid gap-3">
+              <li class="d-flex align-items-center gap-3">
+                <span class="icon-bubble bg-primary-subtle text-primary"><i class="fa-solid fa-envelope"></i></span>
+                <div>
+                  <div class="fw-bold">E-posta</div>
+                  <a class="text-primary" href="mailto:guven@example.com">guven@example.com</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <span class="icon-bubble bg-info-subtle text-info"><i class="fa-brands fa-linkedin"></i></span>
+                <div>
+                  <div class="fw-bold">LinkedIn</div>
+                  <a class="text-info" href="https://www.linkedin.com" target="_blank" rel="noreferrer">linkedin.com/in/guven</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="bento-card h-100 gradient-card">
+            <h3 class="h5 fw-bold mb-3">Favori araçlar</h3>
+            <div class="tool-grid">
+              <div class="tool-chip">VS Code</div>
+              <div class="tool-chip">Figma</div>
+              <div class="tool-chip">Notion</div>
+              <div class="tool-chip">Linear</div>
+              <div class="tool-chip">Vercel</div>
+              <div class="tool-chip">Railway</div>
+              <div class="tool-chip">Supabase</div>
+              <div class="tool-chip">GitHub Actions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 border-top glassy">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+      <div class="text-secondary small">Güven © <span id="year"></span></div>
+      <div class="d-flex gap-3 fs-5">
+        <a class="text-primary" href="#contact" aria-label="İletişim" title="İletişim"><i class="fa-solid fa-envelope"></i></a>
+        <a class="text-gradient" href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
     </div>
-  <!--daytime shifter-->
+  </footer>
 
-  </body>
-  </html>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

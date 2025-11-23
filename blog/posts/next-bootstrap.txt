@@ -1,0 +1,1 @@
+Projeyi hem Next.js hem de saf Bootstrap 5 sürümleriyle hazırlamak, GitHub Pages ve Vercel gibi farklı dağıtım hedeflerini aynı kod tabanında toplamanın pratik bir yolu oldu. Paylaşılan içerik dosyalarıyla blog yazılarının bakımını kolaylaştırdım.

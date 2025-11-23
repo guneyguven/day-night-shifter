@@ -1,0 +1,9 @@
+<svg width="600" height="360" viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <rect width="600" height="360" rx="32" fill="#0b1321"/>
+  <path d="M120 90h160v40H120z" fill="#7b6dff" opacity="0.9"/>
+  <path d="M120 150h220v40H120z" fill="#3ad5c9" opacity="0.8"/>
+  <path d="M120 210h260v40H120z" fill="#7b6dff" opacity="0.6"/>
+  <text x="120" y="300" fill="#cfd4e0" font-family="Inter, sans-serif" font-size="26" font-weight="700">Next.js + Bootstrap 5</text>
+  <circle cx="470" cy="120" r="36" fill="#ffffff" opacity="0.12"/>
+  <circle cx="510" cy="240" r="26" fill="#ffffff" opacity="0.1"/>
+</svg>
